@@ -141,7 +141,7 @@ int main()
    cout << "Display Shipping Label:\n";
    orderStaff.displayShippingLabel();
 
-   cout << "\nDisplay Receipt:\n";
+   cout << "\nDisplay Information:\n";
    orderStaff.displayReceipt();
 
    return 0;

@@ -72,10 +72,7 @@ std::string Order::getShippingZip() const
  ***********************************************************************/
 float Order::getTotalPrice()
 {
-   //testBed does not account for quantity, so the correct equation 
-   //is commented out.
-   //return product.getTotalPrice() * quantity;
-   return product.getTotalPrice();
+   return product.getTotalPrice() * quantity;
 }
 
 /**********************************************************************
@@ -93,8 +90,10 @@ void Order::displayShippingLabel()
  ***********************************************************************/
 void Order::displayReceipt()
 {
-   std::cout << customer.getName() << std::endl;
-   product.displayReceipt();
+   std::cout << customer.getName() << std::endl
+             << product.getName() << std::endl
+             << "Total Price: $" << Order::getTotalPrice()
+             << std::endl;
 }
 
 /**********************************************************************
